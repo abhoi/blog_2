@@ -3,6 +3,8 @@
 // VARIABLES
 //
 
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700');
+
 // Colors
 $blue: #4183C4;
 
@@ -15,8 +17,8 @@ $lightGray: #eee;
 $white: #fff;
 
 // Font stacks
-$helvetica: Helvetica, Arial, sans-serif;
-$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$helvetica: "Roboto", Helvetica, Arial, sans-serif;
+$helveticaNeue: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $georgia: Georgia, serif;
 
 // Mobile breakpoints
