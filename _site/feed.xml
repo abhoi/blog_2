@@ -1,4 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-09T14:58:23-05:00</updated><id>http://localhost:4000/</id><title type="html">Amlaan Bhoi</title><subtitle>Grad Student at UIC</subtitle><entry><title type="html">Project ARYouThereYet</title><link href="http://localhost:4000/aryouthereyet/" rel="alternate" type="text/html" title="Project ARYouThereYet" /><published>2017-12-03T00:00:00-06:00</published><updated>2017-12-03T00:00:00-06:00</updated><id>http://localhost:4000/aryouthereyet</id><content type="html" xml:base="http://localhost:4000/aryouthereyet/">&lt;p align=&quot;justify&quot;&gt;ARYouThereYet is an iOS application aimed towards the augmented reality experience. The application uses Apple’s ARKit library to generate augmented reality objects and nodes. The application is a location and navigation based experience built primarily for pedestrians walking on city streets and want to find establishments that may interest them. The application uses Google’s Places API, Mapbox API, and Apple’s CoreLocation framework to get location data whenever needed. A typical use-case for this application would be:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-09T18:21:23-05:00</updated><id>http://localhost:4000/</id><title type="html">Amlaan Bhoi</title><subtitle>Grad Student @UIC</subtitle><entry><title type="html">Introduction to Conditional Random Fields</title><link href="http://localhost:4000/crf1/" rel="alternate" type="text/html" title="Introduction to Conditional Random Fields" /><published>2018-09-09T00:00:00-05:00</published><updated>2018-09-09T00:00:00-05:00</updated><id>http://localhost:4000/crf1</id><content type="html" xml:base="http://localhost:4000/crf1/">&lt;p align=&quot;justify&quot;&gt;Conditional Random Fields (CRFs) are a class of statistical modeling method often to used to model structured data. CRFs are widely used in machine learning problems. Some specific applications include:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Computer Vision&lt;/strong&gt;: Object recognition, image segmentation&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Natural Language Processing&lt;/strong&gt;: POS tagging, Shallow parsing, Named entity recognition&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Biological Sequences&lt;/strong&gt;: Gene finding, Peptide critical functional region finding&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;CRFs are used as an alternative to hidden Markov models (HMMs) as well. Conditional Random Fields were introduced in 2001 by Lafferty, John, Andrew McCallum, and Fernando CN Pereira [2].&lt;/p&gt;
+
+&lt;p&gt;A &lt;strong&gt;conditional random field&lt;/strong&gt; or &lt;strong&gt;CRF&lt;/strong&gt; is a &lt;strong&gt;Markov Random Field&lt;/strong&gt; where all the clique potentials are conditioned on input features:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;p(\textbf{y}|\textbf{x, w}) = \frac{1}{Z(\textbf{x, w})}\prod_{c} \psi_{c}(\textbf{y}_{c}|\textbf{x, w})&lt;/script&gt;
+
+&lt;p&gt;A CRF is basically a &lt;strong&gt;structured ouput&lt;/strong&gt; extension of &lt;strong&gt;logistic regression&lt;/strong&gt;. We can assume a log-linear representation of the potentials:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\psi_{c}(\textbf{y}_{c}|\textbf{x, w}) = exp(\textbf{w}_{c}^{T} \phi(\textbf{x, }\textbf{y}_{c}))&lt;/script&gt;
+
+&lt;p align=&quot;justify&quot;&gt;CRFs are more efficient than generative classifiers because they don't waste resources modeling things that they always observe. They only focus on the distribution of labels given data. This leads to the potentials of the model be data-dependent. If two nodes &lt;i&gt;x&lt;/i&gt; and &lt;i&gt;y&lt;/i&gt; are discontinuous, then we can &quot;turn off&quot; or set the transition potential to zero. [1]&lt;/p&gt;
+
+&lt;p&gt;We can also represent CRFs as:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;p(\textbf{y}|X) = \frac{1}{Z_X}\textrm{exp}\left (\sum_{s=1}^{m} \left \langle \textbf{w}_{y_{s}}, \textbf{x}_{s} \right \rangle + \sum_{s=1}^{m-1}T_{y_{s},y_{s+1}}\right)&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;Z_X = \sum_{\mathbf{\hat{y}} \in \mathcal{Y}^{m}}^{ } \textrm{exp}\left (\sum_{s=1}^{m} \left \langle \textbf{w}_{\hat{y}_{s}}, \textbf{x}_{s} \right \rangle + \sum_{s=1}^{m-1}T_{\hat{y}_{s},\hat{y}_{s+1}}\right )&lt;/script&gt;
+
+&lt;p&gt;CRFs are extremely powerful for sequence labelling and is highly used in applications such as part-of-speech tagging, optical character recognition, and more.&lt;/p&gt;
+
+&lt;p&gt;More to come…&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Murphy, Kevin P. “Machine Learning: A Probabilistic Perspective. Adaptive Computation and Machine Learning.” (2012).&lt;/li&gt;
+  &lt;li&gt;Lafferty, John, Andrew McCallum, and Fernando CN Pereira. “Conditional random fields: Probabilistic models for segmenting and labeling sequence data.” (2001).&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">Conditional Random Fields (CRFs) are a class of statistical modeling method often to used to model structured data. CRFs are widely used in machine learning problems. Some specific applications include:</summary></entry><entry><title type="html">Project ARYouThereYet</title><link href="http://localhost:4000/aryouthereyet/" rel="alternate" type="text/html" title="Project ARYouThereYet" /><published>2017-12-03T00:00:00-06:00</published><updated>2017-12-03T00:00:00-06:00</updated><id>http://localhost:4000/aryouthereyet</id><content type="html" xml:base="http://localhost:4000/aryouthereyet/">&lt;p align=&quot;justify&quot;&gt;ARYouThereYet is an iOS application aimed towards the augmented reality experience. The application uses Apple’s ARKit library to generate augmented reality objects and nodes. The application is a location and navigation based experience built primarily for pedestrians walking on city streets and want to find establishments that may interest them. The application uses Google’s Places API, Mapbox API, and Apple’s CoreLocation framework to get location data whenever needed. A typical use-case for this application would be:&lt;/p&gt;
 
 &lt;center&gt;&lt;img src=&quot;https://i.imgur.com/x0i8eMm.jpg&quot; width=&quot;500&quot; height=&quot;300&quot; /&gt;&lt;/center&gt;
 
@@ -192,8 +227,4 @@ We cleared out nodes in every iteration and re-initialised whenever required. Th
   &lt;li&gt;Augmented and Virtual Reality: &lt;a href=&quot;https://www.evl.uic.edu/aej/491/index.html&quot;&gt;https://www.evl.uic.edu/aej/491/index.html&lt;/a&gt; (Do take the course. It’s great!)&lt;/li&gt;
   &lt;li&gt;EVL: &lt;a href=&quot;https://www.evl.uic.edu/&quot;&gt;https://www.evl.uic.edu/&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Andy Johnson: &lt;a href=&quot;https://www.evl.uic.edu/aej/&quot;&gt;https://www.evl.uic.edu/aej/&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><summary type="html">ARYouThereYet is an iOS application aimed towards the augmented reality experience. The application uses Apple’s ARKit library to generate augmented reality objects and nodes. The application is a location and navigation based experience built primarily for pedestrians walking on city streets and want to find establishments that may interest them. The application uses Google’s Places API, Mapbox API, and Apple’s CoreLocation framework to get location data whenever needed. A typical use-case for this application would be:</summary></entry><entry><title type="html">You’re up and running!</title><link href="http://localhost:4000/Hello-World/" rel="alternate" type="text/html" title="You're up and running!" /><published>2014-03-03T00:00:00-06:00</published><updated>2014-03-03T00:00:00-06:00</updated><id>http://localhost:4000/Hello-World</id><content type="html" xml:base="http://localhost:4000/Hello-World/">&lt;p&gt;Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/config.png&quot; alt=&quot;_config.yml&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the &lt;a href=&quot;https://github.com/barryclark/jekyll-now&quot;&gt;Jekyll Now repository&lt;/a&gt; on GitHub.&lt;/p&gt;</content><author><name></name></author><summary type="html">Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).</summary></entry></feed>
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">ARYouThereYet is an iOS application aimed towards the augmented reality experience. The application uses Apple’s ARKit library to generate augmented reality objects and nodes. The application is a location and navigation based experience built primarily for pedestrians walking on city streets and want to find establishments that may interest them. The application uses Google’s Places API, Mapbox API, and Apple’s CoreLocation framework to get location data whenever needed. A typical use-case for this application would be:</summary></entry></feed>
