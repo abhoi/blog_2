@@ -19,7 +19,7 @@ html {
 
 body {
 	background: $white;
-  font: 14px/1.4 $body;
+  font: 16px/1.4 $body;
   color: $darkGray;
 }
 
@@ -67,7 +67,7 @@ h4 {
 }
 
 p {
-  margin: 5px 0;
+  margin: 10px 0;
 }
 
 a {
@@ -268,7 +268,7 @@ nav {
   }
 
   .read-more {
-    text-transform: uppercase;
+    text-transform: lowercase;
     font-size: 15px;
   }
 }
