@@ -2,14 +2,11 @@
 layout: default
 ---
 
-<p align="justify">I am a graduate student in Computer Science at <a href="https://www.uic.edu/">University of Illinois at Chicago</a> where I'm working on action recognition. I expect to graduate in Spring 2019. My advisor is Prof. <a href="https://www.cs.uic.edu/~zhangx/">Xinhua Zhang</a>. I am currently interning as a R&D Intern at <a href="https://www.cccis.com/">CCC Information Services</a> where I work in the Photo Analytics (Computer Vision) team. I am also an <a href="https://software.intel.com/en-us/ai-academy/ambassadors">Intel AI Student Ambassador</a> through which I share upcoming research on Artificial Intelligence, Machine Learning, & Deep Learning. I graduated from <a href="http://www.amity.edu/">Amity University</a> with a B.Tech in Computer Science & Engineering in May 2017 with First Class honors where I was advised by Dr. <a href="https://www.nitw.ac.in/faculty/id/16877/">Sushil Kumar</a>. 
-</p>
-
 <div class="posts">
   {% for post in site.posts %}
     <article class="post">
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+      <h4><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
 
       <div class="entry">
         {{ post.excerpt }}

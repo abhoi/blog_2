@@ -1,8 +1,8 @@
 /***************/
 /* MEYER RESET */
 /***************/
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,600");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -67,7 +67,7 @@ html {
 
 body {
   background: #fff;
-  font: 16px/1.4 "Open Sans", "Roboto", sans-serif;
+  font: 14px/1.4 "Open Sans", "Roboto", sans-serif;
   color: #333;
 }
 
@@ -109,11 +109,13 @@ h3 {
 
 h4 {
   font-size: 18px;
-  color: #666;
+}
+h4 a {
+  color: inherit;
 }
 
 p {
-  margin: 15px 0;
+  margin: 5px 0;
 }
 
 a {
@@ -191,12 +193,12 @@ img {
 /* LAYOUT / SECTIONS */
 /*********************/
 .wrapper-masthead {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .masthead {
-  padding: 20px 0;
-  border-bottom: 1px solid #eee;
+  padding: 5px 0;
+  border-bottom: 1px solid #222;
 }
 @media screen and (max-width: 640px) {
   .masthead {
@@ -308,14 +310,14 @@ nav a {
 }
 
 .wrapper-footer {
-  margin-top: 50px;
+  margin-top: 5px;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   background-color: #eee;
 }
 
 footer {
-  padding: 20px 0;
+  padding: 5px 0;
   text-align: center;
 }
 
