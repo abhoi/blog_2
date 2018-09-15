@@ -4,7 +4,7 @@
 //
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700');
-@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700');
 
 // Colors
 $blue: #4183C4;
@@ -22,7 +22,7 @@ $white: #fff;
 // $helveticaNeue: "Merriweather", "Helvetica Neue", Helvetica, Arial, sans-serif;
 // $georgia: Georgia, serif;
 $roboto: "Roboto", sans-serif;
-$body: "Merriweather Sans", sans-serif;
+$body: "Merriweather", sans-serif;
 
 // Mobile breakpoints
 @mixin mobile {
