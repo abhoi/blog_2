@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-10T16:39:19-05:00</updated><id>http://localhost:4000/</id><title type="html">Amlaan Bhoi</title><subtitle>Grad Student at UIC</subtitle><entry><title type="html">Introduction to Conditional Random Fields</title><link href="http://localhost:4000/crf1/" rel="alternate" type="text/html" title="Introduction to Conditional Random Fields" /><published>2018-09-09T00:00:00-05:00</published><updated>2018-09-09T00:00:00-05:00</updated><id>http://localhost:4000/crf1</id><content type="html" xml:base="http://localhost:4000/crf1/">&lt;p align=&quot;justify&quot;&gt;Conditional Random Fields (CRFs) are a class of statistical modeling method often to used to model structured data. CRFs are widely used in machine learning problems. Some specific applications include:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-15T14:45:57-05:00</updated><id>http://localhost:4000/</id><title type="html">Amlaan Bhoi</title><subtitle>Grad Student at UIC</subtitle><entry><title type="html">Introduction to Conditional Random Fields</title><link href="http://localhost:4000/crf1/" rel="alternate" type="text/html" title="Introduction to Conditional Random Fields" /><published>2018-09-09T00:00:00-05:00</published><updated>2018-09-09T00:00:00-05:00</updated><id>http://localhost:4000/crf1</id><content type="html" xml:base="http://localhost:4000/crf1/">&lt;p align=&quot;justify&quot;&gt;Conditional Random Fields (CRFs) are a class of statistical modeling method often to used to model structured data. CRFs are widely used in machine learning problems. Some specific applications include:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;Computer Vision&lt;/strong&gt;: Object recognition, image segmentation&lt;/li&gt;
@@ -24,7 +24,21 @@
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;Z_X = \sum_{\mathbf{\hat{y}} \in \mathcal{Y}^{m}}^{ } \textrm{exp}\left (\sum_{s=1}^{m} \left \langle \textbf{w}_{\hat{y}_{s}}, \textbf{x}_{s} \right \rangle + \sum_{s=1}^{m-1}T_{\hat{y}_{s},\hat{y}_{s+1}}\right )&lt;/script&gt;
 
-&lt;p&gt;More to come…&lt;/p&gt;
+&lt;p align=&quot;justify&quot;&gt;A key advantange of CRFs over Markov Random Fields (MRF) is that we don't &quot;waste resources&quot; modeling things that we always observe. Another advantage is that the potentials of the model are data-dependent. As an example, if we are classifying images, we can &quot;turn off&quot; label smoothing between two neighboring nodes $s$ and $t$. The only disadvantage of CRF over MRF is that they require labeled training data and are slower to train.&lt;/p&gt;
+
+&lt;p align=&quot;justify&quot;&gt;The most commonly used CRFs use a chain-structured graph to model correlation amongst neighboring labels. Traditionally, Hidden Markov Models (HMMs) are used for such tasks. These are joint density models of form:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;p(\mathbf{x}, \mathbf{y}|\mathbf{w}) = \prod_{t=1}^{T}p(y_{t}|y_{t-1}, \mathbf{w})p(\mathbf{x}_{t}|y_{t},\mathbf{w})&lt;/script&gt;
+
+&lt;p align=&quot;justify&quot;&gt;An HMM requires specifying a generative model which is difficult. Furthermore, each $\mathbf{x}_{t}$ is required to be local, since it is hard to define a generative model for the whole stream of observations $\mathbf{x}=\mathbf{x}_{1:T}$. An obvious way to make a descriminative version of an HMM is to &quot;reverse the arrows&quot; from $y_{t}$ to $\mathbf{x}_{t}$ to model a form as:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;p(\mathbf{x}, \mathbf{y}|\mathbf{w}) = \prod_{t}p(y_{t}|y_{t-1}, \mathbf{x},\mathbf{w})&lt;/script&gt;
+
+&lt;p align=&quot;justify&quot;&gt;This is called a &lt;b&gt;maximum entropy Markov model&lt;/b&gt; or &lt;b&gt;MEMM&lt;/b&gt;. An MEMM is simply a Markov chain whose state transition probabilities are conditioned on input features. A chain-structured CRF has the form:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;p(\mathbf{y}|\mathbf{x}, \mathbf{w}) = \frac{1}{Z(\mathbf{x}, \mathbf{w})}\psi (y_t|\mathbf{x}, \mathbf{w})\prod_{t=1}^{T-1}\psi(y_t, y_{t+1}|\mathbf{x}, \mathbf{w})&lt;/script&gt;
+
+&lt;p align=&quot;justify&quot;&gt;Chain-structured CRFs remove the &lt;b&gt;label bias&lt;/b&gt; problem. The problem is that local features at time $t$ do not influence states prior to time $t$. In MEMMs, the label bias problem occurs because directed models are &lt;b&gt;locally normalized&lt;/b&gt;, meaning each CPD sums to 1. By contrast, MRFs and CRFs are &lt;b&gt;globally normalized&lt;/b&gt;, which means that local factors do not need to sum to 1, since partition function $Z$, which sums over all joint configurations, will ensure the model defines a valid distribution. The main disadvantage is that we do not get a valid probability distribution over $\mathbf{y}$ until we have seen the whole sentence. CRFs are also not as useful as DGMs for online or real-time inference. Also, $Z$ depends on all nodes which makes CRFs much slower to train.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;:&lt;/p&gt;
 
