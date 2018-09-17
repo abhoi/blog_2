@@ -3,8 +3,8 @@
 // VARIABLES
 //
 
-// @import url('https://fonts.googleapis.com/css?family=Roboto:700');
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+// @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700');
 
 // Colors
 $blue: #4183C4;
@@ -21,8 +21,8 @@ $white: #fff;
 // $helvetica: "Merriweather", Helvetica, Arial, sans-serif;
 // $helveticaNeue: "Merriweather", "Helvetica Neue", Helvetica, Arial, sans-serif;
 // $georgia: Georgia, serif;
-$roboto: "Source Sans Pro", sans-serif;
-$body: "Source Sans Pro", sans-serif;
+$roboto: Georgia, sans-serif;
+$body: Georgia, sans-serif;
 
 // Mobile breakpoints
 @mixin mobile {
