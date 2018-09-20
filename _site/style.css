@@ -60,6 +60,10 @@ table {
 /**************/
 /* BASE RULES */
 /**************/
+.entry {
+  margin-top: -1em;
+}
+
 html {
   font-size: 100%;
 }
