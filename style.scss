@@ -19,7 +19,7 @@ html {
 
 body {
 	background: $white;
-  font: 16px/1.4 $body;
+  font: 14px $body;
   color: $darkGray;
 }
 
@@ -164,7 +164,7 @@ img {
 
 .masthead {
   padding: 5px 0;
-  border-bottom: 1px solid $darkerGray;
+  border-bottom: 0.5px solid $darkerGray;
 
   @include mobile {
     text-align: center;
@@ -204,14 +204,13 @@ img {
   cursor: pointer;
   font-family: $roboto;
   font-weight: 700;
-  font-size: 28px;
-  letter-spacing: 1px;
+  font-size: 20px;
 }
 
 .site-description {
   margin: -5px 0 0 0;
   color: $gray;
-  font-size: 16px;
+  font-size: 12px;
 
   @include mobile {
     margin: 3px 0;
@@ -235,8 +234,7 @@ nav {
     margin-left: 20px;
     color: $darkGray;
     text-align: right;
-    font-weight: 300;
-    letter-spacing: 1px;
+    font-weight: 700;
 
     @include mobile {
       margin: 0 10px;
@@ -250,12 +248,12 @@ nav {
 //
 
 .posts > .post {
-  padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
+  padding-bottom: 0.5em;
+  border-bottom: 0.5px solid $lightGray;
 }
 
 .posts > .post:last-child {
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
   border-bottom: none;
 }
 
@@ -275,7 +273,7 @@ nav {
 
   .read-more {
     text-transform: lowercase;
-    font-size: 15px;
+    font-size: 14px;
   }
 }
 
