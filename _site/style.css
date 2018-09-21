@@ -57,6 +57,26 @@ table {
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "CMU San Serif";
+  src: url("../fonts/CMU/cmunss.ttf");
+}
+@font-face {
+  font-family: "CMU San Serif";
+  src: url("../fonts/CMU/cmunsi.ttf");
+  font-style: italic;
+}
+@font-face {
+  font-family: "CMU San Serif";
+  src: url("../fonts/CMU/cmunsx.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "CMU San Serif";
+  src: url("../fonts/CMU/cmunso.ttf");
+  font-style: italic;
+  font-weight: bold;
+}
 /**************/
 /* BASE RULES */
 /**************/
@@ -70,7 +90,7 @@ html {
 
 body {
   background: #fff;
-  font: 14px "Roboto", sans-serif;
+  font: 15px "CMU San Serif", "Roboto", sans-serif;
   color: #333;
 }
 

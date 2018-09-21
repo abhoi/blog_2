@@ -168,7 +168,6 @@ We cleared out nodes in every iteration and re-initialised whenever required. Th
 <script src="https://gist.github.com/abhoi/1f17a358b15c49afc7afee66d4dc0bab.js"></script>
 
 ### References
-
 1. Apple documentation including ARKit, Swift4: [https://developer.apple.com/](https://developer.apple.com/)
 2. StackOverflow for all bugs and issues. Thank god for their amazing community: [https://stackoverflow.com/](https://stackoverflow.com/)
 3. Bob the developer's blog for completion handlers:

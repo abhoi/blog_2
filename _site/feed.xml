@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-20T18:08:45-05:00</updated><id>http://localhost:4000/</id><title type="html">Amlaan Bhoi</title><subtitle>Graduate student at UIC</subtitle><entry><title type="html">Introduction to Conditional Random Fields</title><link href="http://localhost:4000/crf1/" rel="alternate" type="text/html" title="Introduction to Conditional Random Fields" /><published>2018-09-09T00:00:00-05:00</published><updated>2018-09-09T00:00:00-05:00</updated><id>http://localhost:4000/crf1</id><content type="html" xml:base="http://localhost:4000/crf1/">&lt;p align=&quot;justify&quot;&gt;Conditional Random Fields (CRFs) are a class of statistical modeling method often to used to model structured data. CRFs are used as an alternative to hidden Markov models (HMMs) as well. Conditional Random Fields were introduced in 2001 by Lafferty, John, Andrew McCallum, and Fernando CN Pereira [2]. They are widely used in machine learning problems. Some specific applications include:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-20T20:22:49-05:00</updated><id>http://localhost:4000/</id><title type="html">Amlaan Bhoi</title><subtitle>Graduate student at UIC</subtitle><entry><title type="html">Introduction to Conditional Random Fields</title><link href="http://localhost:4000/crf1/" rel="alternate" type="text/html" title="Introduction to Conditional Random Fields" /><published>2018-09-09T00:00:00-05:00</published><updated>2018-09-09T00:00:00-05:00</updated><id>http://localhost:4000/crf1</id><content type="html" xml:base="http://localhost:4000/crf1/">&lt;p align=&quot;justify&quot;&gt;Conditional Random Fields (CRFs) are a class of statistical modeling method often to used to model structured data. CRFs are used as an alternative to hidden Markov models (HMMs) as well. Conditional Random Fields were introduced in 2001 by Lafferty, John, Andrew McCallum, and Fernando CN Pereira [2]. They are widely used in machine learning problems. Some specific applications include:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;Computer Vision&lt;/strong&gt;: Object recognition, image segmentation&lt;/li&gt;
@@ -38,8 +38,9 @@
 
 &lt;p align=&quot;justify&quot;&gt;Chain-structured CRFs remove the &lt;b&gt;label bias&lt;/b&gt; problem. The problem is that local features at time $t$ do not influence states prior to time $t$. In MEMMs, the label bias problem occurs because directed models are &lt;b&gt;locally normalized&lt;/b&gt;, meaning each CPD sums to 1. By contrast, MRFs and CRFs are &lt;b&gt;globally normalized&lt;/b&gt;, which means that local factors do not need to sum to 1, since partition function $Z$, which sums over all joint configurations, will ensure the model defines a valid distribution. The main disadvantage is that we do not get a valid probability distribution over $\mathbf{y}$ until we have seen the whole sentence. CRFs are also not as useful as DGMs for online or real-time inference. Also, $Z$ depends on all nodes which makes CRFs much slower to train.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;:&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;Murphy, Kevin P. “Machine Learning: A Probabilistic Perspective. Adaptive Computation and Machine Learning.” (2012).&lt;/li&gt;
   &lt;li&gt;Lafferty, John, Andrew McCallum, and Fernando CN Pereira. “Conditional random fields: Probabilistic models for segmenting and labeling sequence data.” (2001).&lt;/li&gt;
@@ -219,8 +220,7 @@ We cleared out nodes in every iteration and re-initialised whenever required. Th
 
 &lt;script src=&quot;https://gist.github.com/abhoi/1f17a358b15c49afc7afee66d4dc0bab.js&quot;&gt;&lt;/script&gt;
 
-&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
-
+&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;Apple documentation including ARKit, Swift4: &lt;a href=&quot;https://developer.apple.com/&quot;&gt;https://developer.apple.com/&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;StackOverflow for all bugs and issues. Thank god for their amazing community: &lt;a href=&quot;https://stackoverflow.com/&quot;&gt;https://stackoverflow.com/&lt;/a&gt;&lt;/li&gt;

@@ -111,8 +111,9 @@
 
 <p align="justify">Chain-structured CRFs remove the <b>label bias</b> problem. The problem is that local features at time $t$ do not influence states prior to time $t$. In MEMMs, the label bias problem occurs because directed models are <b>locally normalized</b>, meaning each CPD sums to 1. By contrast, MRFs and CRFs are <b>globally normalized</b>, which means that local factors do not need to sum to 1, since partition function $Z$, which sums over all joint configurations, will ensure the model defines a valid distribution. The main disadvantage is that we do not get a valid probability distribution over $\mathbf{y}$ until we have seen the whole sentence. CRFs are also not as useful as DGMs for online or real-time inference. Also, $Z$ depends on all nodes which makes CRFs much slower to train.</p>
 
-<p><strong>References</strong>:</p>
+<p><br /></p>
 
+<p><strong>References</strong>:</p>
 <ol>
   <li>Murphy, Kevin P. “Machine Learning: A Probabilistic Perspective. Adaptive Computation and Machine Learning.” (2012).</li>
   <li>Lafferty, John, Andrew McCallum, and Fernando CN Pereira. “Conditional random fields: Probabilistic models for segmenting and labeling sequence data.” (2001).</li>
